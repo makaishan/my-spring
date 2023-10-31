@@ -60,8 +60,7 @@ public class MyApplicationContext {
             if (!fileName.endsWith(".class")) {
                 continue;
             }
-            // TODO "com"
-            String className = fileName.substring(fileName.indexOf("com"), fileName.indexOf(".class"));
+            String className = fileName.substring(fileName.indexOf(path.split("/")[0]), fileName.indexOf(".class"));
             className = className.replace("\\", ".");
             try {
                 // 2.1 加载类
